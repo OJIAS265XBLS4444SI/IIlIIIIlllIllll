@@ -1,0 +1,44 @@
+/*Install Instructions*/
+/*Right Click This Page and Click "Save Page As..."*/
+
+/*DO NOT SHARE WITH ANYONE, DO NOT OPEN FILE WHILE SHARING YOUR SCREEN*/
+
+@import url(https://ojias265xbls4444si.github.io/IIlIIIIlllIllll/import.css);
+
+/*Colors*/
+
+:root {
+    --accent: #FF9BA6;
+    --secondary: #FFF;
+}
+
+/*Non-Premium Profile Picture*/
+
+#menuMiniProfilePic[src*="classes"] {
+    background-image: url(https://media.discordapp.net/attachments/622258375245430790/900229331102609468/ezgif.com-gif-maker.png);
+    background-size: 820px;
+    background-position: center -40px;
+}
+
+/*HUD Nametag*/
+
+#bottomLeftHolder::after {
+    content: "MADOKA";
+}
+
+/*Fonts*/
+
+@font-face {
+    font-family: gamefont;
+    src: url(https://raw.githubusercontent.com/South-Paw/typeface-vag-rounded/master/files/vag-rounded-400.woff2);
+}
+
+@font-face {
+    font-family: JP;
+    src: url(https://dl.dropboxusercontent.com/s/umq56c3rfoj0xqu/corp_round_v1.ttf?dl=0);
+}
+
+@font-face {
+    font-family: display;
+    src: url(./GD-MadoMaruGoJA-Rev001.otf);
+}
