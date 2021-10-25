@@ -31,6 +31,54 @@
     }
 }
 
+/*Loading Screen*/
+
+#initLoader {
+    background-color: var(--accent);
+}
+
+.lC-cube {
+    display: none;
+}
+
+#lC-cont::after {
+    content: " ";
+    display: block;
+    width: 120px;
+    height: 120px;
+    border: 12px double var(--secondary);
+    border-radius: 50%;
+}
+
+#loadHeader, #loadEditrBtn {
+    display: none;
+}
+
+#loadTipsHolder {
+    display: none;
+}
+
+#loadInfoLHolder, #loadInfoRHolder {
+    font-size: 0;
+    color: var(--secondary);
+}
+
+#loadGamNm {
+    color: var(--secondary);
+}
+
+#loadInfoRHolder::before {
+    content: "CSS BY TAE";
+    display: block;
+    font-size: 28px;
+}
+
+#loadInfoRHolder::after {
+    content: "TWT: @WHUUAYU・IGN: びこ";
+    display: block;
+    font-size: 28px;
+}
+
 /*Section II: Chat*/
 
 #uiBase.onMenu #chatHolder {
