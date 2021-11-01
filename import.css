@@ -979,6 +979,10 @@ input:checked+.sliderSml {
     padding: 16px;
 }
 
+.dark .tabANew {
+    border-width: 0 !important;
+}
+
 #requiresRestart {
     display: none;
 }
