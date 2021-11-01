@@ -409,7 +409,22 @@
 }
 
 #uiBase.onMenu #spectButton {
-    opacity: 0;
+    transform: unset;
+    left: unset;
+    right: 20px;
+    top: 260px;
+}
+
+#spectButton span:first-child {
+    display: none;
+}
+
+#spectButton .switchsml {
+    margin: 0;
+}
+
+input:checked+.sliderSml {
+    background-color: var(--accent);
 }
 
 /*Profile*/
