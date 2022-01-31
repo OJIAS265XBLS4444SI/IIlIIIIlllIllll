@@ -1377,6 +1377,13 @@ input:checked+.slider {
     background-color: transparent;
 }
 
+.leaderCounter~img {
+    position: relative;
+    top: 10px;
+    height: 24px !important;
+    margin-right: 8px !important;
+}
+
 .leaderItem {
     font-size: 28px;
     text-shadow: 0 4px rgba(0,0,0,0.25);
