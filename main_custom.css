@@ -1,29 +1,54 @@
 /*
-*
-* MAGICAL GIRL CSS
-* 
-* DO NOT SHARE WITH ANYONE, DO NOT OPEN FILE WHILE SHARING YOUR SCREEN
-* Remove the file from your resource swapper before sharing your resource swapper
-*
-* Reinstall URL: https://ojias265xbls4444si.github.io/IIlIIIIlllIllll/main_custom.css
-* - Right Click the Page
-* - Click `Save Page As...`
-*
-* In event of URL migration/leak, contact me again on Discord (tae#4444)
-*
+MAGICAL GIRL CSS
+ 
+DO NOT SHARE WITH ANYONE, DO NOT OPEN FILE WHILE SHARING YOUR SCREEN
+Remove the file from your resource swapper before sharing your resource swapper
+
+--Install Instructions--
+    Right Click This Page and Click "Save Page As..."
+    Reinstall URL: https://ojias265xbls4444si.github.io/IIlIIIIlllIllll/main_custom.css
+
+--Changelog--
+    https://ojias265xbls4444si.github.io/IIlIIIIlllIllll
+
+In event of a leak, PLEASE contact me again on Discord (tae#4444)
 */
 
 /*↓YOU DO NOT NEED TO DO ANYTHING WITH THIS LINK, IT IS FOR AUTO UPDATES↓*/
 @import url(https://ojias265xbls4444si.github.io/IIlIIIIlllIllll/import.css);
 /*↑YOU DO NOT NEED TO DO ANYTHING WITH THIS LINK, IT IS FOR AUTO UPDATES↑*/
 
-/*==CSS CUSTOMIZATION SETTINGS==*/
-
-/*Colors*/
+/*CSS CUSTOMIZATION SETTINGS*/
 
 :root {
-    --accent: #FF9BA6;
-    --secondary: #FFF;
+    /*Colors*/
+    --accent: #ff9ba6;
+    --secondary: #fff;
+
+    /*Icons*/
+    --sniper: url(https://api.iconify.design/mdi/target.svg?color=%23ffffff);
+    --ak: url(https://api.iconify.design/mdi/menu.svg?color=%23ffffff);
+    --pistols: url(https://api.iconify.design/mdi/pistol.svg?color=%23ffffff);
+    --mag: url(https://api.iconify.design/mdi/magazine-pistol.svg?color=%23ffffff&flip=horizontal);
+    --smg: url(https://api.iconify.design/mdi/chevron-triple-up.svg?color=%23ffffff);
+    --revolver: url(https://api.iconify.design/mdi/dice-6.svg?color=%23ffffff);
+    --shotgun: url(https://api.iconify.design/mdi/dots-grid.svg?color=%23ffffff);
+    --lmg: url(https://api.iconify.design/mdi/navigation.svg?color=%23ffffff);
+    --semi: url(https://api.iconify.design/mdi/percent.svg?color=%23ffffff);
+    --rpg: url(https://api.iconify.design/mdi/rocket-launch.svg?color=%23ffffff);
+    --uzi: url(https://api.iconify.design/mdi/scatter-plot.svg?color=%23ffffff);
+    --ablaster: url(https://api.iconify.design/mdi/battery-high.svg?color=%23ffffff);
+    --crossbow: url(https://api.iconify.design/mdi/bow-arrow.svg?color=%23ffffff);
+    --famas: url(https://api.iconify.design/mdi/focus-field-vertical.svg?color=%23fffff);
+    --so: url(https://api.iconify.design/mdi/party-popper.svg?color=%23ffffff);
+    --bomb: url(https://api.iconify.design/mdi/bomb.svg?color=%23ffffff);
+    --blaster: url(https://api.iconify.design/mdi/lightning-bolt.svg?color=%23ffffff);
+    --build: url(https://api.iconify.design/mdi/hammer-wrench.svg?color=%23ffffff);
+    --melee: url(https://api.iconify.design/mdi/knife-military.svg?color=%23ffffff);
+    --fist: url(https://api.iconify.design/mdi/boxing-glove.svg?color=%23ffffff);
+    /*To change the color of the icons, please replace the last 6 characters of the urls with a hex code
+    (for example, black would be https://api.iconify.design/mdi/target.svg?color=%23000000)
+    */
 }
 
 /*Non-Premium Profile Picture*/
