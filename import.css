@@ -41,13 +41,34 @@
     display: none;
 }
 
+@keyframes load {
+    0%, 100% {
+      animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(1800deg);
+      animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+    100% {
+      transform: rotateY(3600deg);
+    }
+}
+
 #lC-cont::after {
-    content: " ";
+    content: "star";
     display: block;
     width: 120px;
+    line-height: 120px;
     height: 120px;
     border: 12px double var(--secondary);
     border-radius: 50%;
+    color: var(--secondary);
+    font-family: 'Material Icons';
+    font-size: 64px;
+    animation: load 10s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
 #loadHeader, #loadEditrBtn {
@@ -76,6 +97,16 @@
 #loadInfoRHolder::after {
     content: "TWT: @WHUUAYU・IGN: びこ";
     display: block;
+    font-size: 28px;
+}
+
+#loadInfoLHolder::before {
+    content: "LAST UPDATED 2022-1-31";
+    font-size: 28px;
+}
+
+#loadInfoLHolder::after {
+    content: "MAIN_CUSTOM.CSS UPDATED, PLEASE REINSTALL";
     font-size: 28px;
 }
 
@@ -190,87 +221,87 @@
 }
 
 .weaponChatIcon[src*="icon_1"] {
-    content: url(https://api.iconify.design/mdi/target.svg?color=white);
+    content:var(--sniper);
 }
 
 .weaponChatIcon[src*="icon_2"] {
-    content: url(https://api.iconify.design/mdi/menu.svg?color=white);
+    content: var(--ak);
 }
 
 .weaponChatIcon[src*="icon_3"], .weaponChatIcon[src*="icon_11"], .weaponChatIcon[src*="icon_17"] {
-    content: url(https://api.iconify.design/mdi/pistol.svg?color=white);
+    content: var(--pistols);
 }
 
 .weaponChatIcon[src*="icon_4"] {
-    content: url(https://api.iconify.design/mdi/chevron-triple-up.svg?color=white);
+    content: var(--smg);
 }
 
 .weaponChatIcon[src*="icon_5"] {
-    content: url(https://api.iconify.design/mdi/dice-6.svg?color=white);
+    content: var(--revolver);
 }
 
 .weaponChatIcon[src*="icon_6"] {
-    content: url(https://api.iconify.design/mdi/dots-grid.svg?color=white);
+    content: var(--shotgun);
 }
 
 .weaponChatIcon[src*="icon_7"] {
-    content: url(https://api.iconify.design/mdi/reorder-vertical.svg?color=white);
+    content: var(--lmg);
 }
 
 .weaponChatIcon[src*="icon_8"] {
-    content: url(https://api.iconify.design/mdi/bullseye.svg?color=white);
+    content: var(--semi);
 }
 
 .weaponChatIcon[src*="icon_9"] {
-    content: url(https://api.iconify.design/mdi/rocket-launch.svg?color=white);
+    content: var(--rpg);
 }
 
 .weaponChatIcon[src*="icon_10"] {
-    content: url(https://api.iconify.design/mdi/scatter-plot.svg?color=white);
+    content: var(--uzi);
 }
 
 .weaponChatIcon[src*="icon_12"], .weaponChatIcon[src*="icon_13"] {
-    content: url(https://api.iconify.design/mdi/battery-high.svg?color=white);
+    content: var(--ablaster);
 }
 
 .weaponChatIcon[src*="icon_14"] {
-    content: url(https://api.iconify.design/mdi/bow-arrow.svg?color=white);
+    content: var(--crossbow);
 }
 
 .weaponChatIcon[src*="icon_15"] {
-    content: url(https://api.iconify.design/mdi/dots-vertical.svg?color=white);
+    content: var(--famas);
 }
 
 .weaponChatIcon[src*="icon_16"] {
-    content: url(https://api.iconify.design/mdi/transfer-up.svg?color=white);
+    content: var(--so);
 }
 
 .weaponChatIcon[src*="icon_18"] {
-    content: url(https://api.iconify.design/mdi/bomb.svg?color=white);
+    content: var(--bomb);
 }
 
 .weaponChatIcon[src*="icon_19"] {
-    content: url(https://api.iconify.design/mdi/lightning-bolt.svg?color=white);
+    content: var(--blaster);
 }
 
 .weaponChatIcon[src*="icon_20"] {
-    content: url(https://api.iconify.design/mdi/hammer-wrench.svg?color=white);
+    content: var(--build);
 }
 
 .weaponChatIcon[src*="icon_22"] {
-    content: url(https://api.iconify.design/mdi/gun.svg?color=white);
-    background: url(https://api.iconify.design/mdi/magazine-pistol.svg?color=white&flip=horizontal);
+    content: var(--pistols);
+    background: var(--mag);
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: 12px 8px;
 }
 
 .weaponChatIcon[src*="melee"] {
-    content: url(https://api.iconify.design/mdi/knife-military.svg?color=white) !important;
+    content: var(--melee) !important;
 }
 
 .fistChatIcon {
-    content: url(https://api.iconify.design/mdi/boxing-glove.svg?color=white) !important;
+    content: var(--fist) !important;
     width: 28px;
     margin-right: 12px;
     margin-left: 12px;
@@ -318,6 +349,7 @@
     top: 240px;
     margin: 0;
     padding: 0;
+    color: var(--secondary);
 }
 
 #seasonLabel span {
@@ -339,6 +371,17 @@
     display: none;
 }
 
+#instructionsUpdate {
+    border-radius: 16px;
+    background-color: var(--accent);
+    box-shadow: inset 0 -4px rgba(0,0,0,0.35);
+}
+
+#instructionsUpdate div, #instructionsUpdate a {
+    color: var(--secondary) !important;
+    text-shadow: 0 4px rgba(0,0,0,0.25);
+}
+
 #menuTimer {
     display: none !important;
 }
@@ -351,6 +394,10 @@
 
 .headerBar {
     background-color: transparent;
+}
+
+.headerBar div {
+    color: var(--secondary) !important;
 }
 
 .junkInfo, .krInfo {
@@ -370,6 +417,7 @@
     right: 82px;
     top: 120px;
     background-color: var(--accent);
+    color: var(--secondary);
     padding: 8px 16px;
     padding-top: 2px;
     font-size: 32px;
@@ -730,6 +778,7 @@ input:checked+.sliderSml {
     vertical-align: unset !important;
     font-size: 48px !important;
     line-height: 48px;
+    color: var(--secondary) !important;
 }
 
 #menuClassNameTag {
@@ -1130,6 +1179,7 @@ input:checked+.slider {
 }
 
 #healthValue {
+    color: var(--secondary);
     font-size: 24px;
     text-shadow: var(--accent) 4px 0px 0px, var(--accent) 3.87565px 0.989616px 0px, var(--accent) 3.51033px 1.9177px 0px, var(--accent) 2.92676px 2.72656px 0px, var(--accent) 2.16121px 3.36588px 0px, var(--accent) 1.26129px 3.79594px 0px, var(--accent) 0.282949px 3.98998px 0px, var(--accent) -0.712984px 3.93594px 0px, var(--accent) -1.66459px 3.63719px 0px, var(--accent) -2.51269px 3.11229px 0px, var(--accent) -3.20457px 2.39389px 0px, var(--accent) -3.69721px 1.52664px 0px, var(--accent) -3.95997px 0.56448px 0px, var(--accent) -3.97652px -0.432781px 0px, var(--accent) -3.74583px -1.40313px 0px, var(--accent) -3.28224px -2.28625px 0px, var(--accent) -2.61457px -3.02721px 0px, var(--accent) -1.78435px -3.57996px 0px, var(--accent) -0.843183px -3.91012px 0px, var(--accent) 0.150409px -3.99717px 0px, var(--accent) 1.13465px -3.8357px 0px, var(--accent) 2.04834px -3.43574px 0px, var(--accent) 2.83468px -2.82216px 0px, var(--accent) 3.44477px -2.03312px 0px, var(--accent) 3.84068px -1.11766px 0px, var(--accent) 3.9978px -0.132717px 0px;
 }
@@ -1192,6 +1242,7 @@ input:checked+.slider {
     font-size: 64px;
     bottom: 30px;
     text-shadow: var(--accent) 4px 0px 0px, var(--accent) 3.87565px 0.989616px 0px, var(--accent) 3.51033px 1.9177px 0px, var(--accent) 2.92676px 2.72656px 0px, var(--accent) 2.16121px 3.36588px 0px, var(--accent) 1.26129px 3.79594px 0px, var(--accent) 0.282949px 3.98998px 0px, var(--accent) -0.712984px 3.93594px 0px, var(--accent) -1.66459px 3.63719px 0px, var(--accent) -2.51269px 3.11229px 0px, var(--accent) -3.20457px 2.39389px 0px, var(--accent) -3.69721px 1.52664px 0px, var(--accent) -3.95997px 0.56448px 0px, var(--accent) -3.97652px -0.432781px 0px, var(--accent) -3.74583px -1.40313px 0px, var(--accent) -3.28224px -2.28625px 0px, var(--accent) -2.61457px -3.02721px 0px, var(--accent) -1.78435px -3.57996px 0px, var(--accent) -0.843183px -3.91012px 0px, var(--accent) 0.150409px -3.99717px 0px, var(--accent) 1.13465px -3.8357px 0px, var(--accent) 2.04834px -3.43574px 0px, var(--accent) 2.83468px -2.82216px 0px, var(--accent) 3.44477px -2.03312px 0px, var(--accent) 3.84068px -1.11766px 0px, var(--accent) 3.9978px -0.132717px 0px;
+    color: var(--secondary);
 }
 
 #ammoIcon {
@@ -1237,87 +1288,87 @@ input:checked+.slider {
 }
 
 .weapIcon[src*="icon_1"] {
-    content: url(https://api.iconify.design/mdi/target.svg?color=white);
+    content:var(--sniper);
 }
 
 .weapIcon[src*="icon_2"] {
-    content: url(https://api.iconify.design/mdi/menu.svg?color=white);
+    content: var(--ak);
 }
 
 .weapIcon[src*="icon_3"], .weapIcon[src*="icon_11"], .weapIcon[src*="icon_17"] {
-    content: url(https://api.iconify.design/mdi/pistol.svg?color=white);
+    content: var(--pistols);
 }
 
 .weapIcon[src*="icon_4"] {
-    content: url(https://api.iconify.design/mdi/chevron-triple-up.svg?color=white);
+    content: var(--smg);
 }
 
 .weapIcon[src*="icon_5"] {
-    content: url(https://api.iconify.design/mdi/dice-6.svg?color=white);
+    content: var(--revolver);
 }
 
 .weapIcon[src*="icon_6"] {
-    content: url(https://api.iconify.design/mdi/dots-grid.svg?color=white);
+    content: var(--shotgun);
 }
 
 .weapIcon[src*="icon_7"] {
-    content: url(https://api.iconify.design/mdi/reorder-vertical.svg?color=white);
+    content: var(--lmg);
 }
 
 .weapIcon[src*="icon_8"] {
-    content: url(https://api.iconify.design/mdi/bullseye.svg?color=white);
+    content: var(--semi);
 }
 
 .weapIcon[src*="icon_9"] {
-    content: url(https://api.iconify.design/mdi/rocket-launch.svg?color=white);
+    content: var(--rpg);
 }
 
 .weapIcon[src*="icon_10"] {
-    content: url(https://api.iconify.design/mdi/scatter-plot.svg?color=white);
+    content: var(--uzi);
 }
 
 .weapIcon[src*="icon_12"], .weapIcon[src*="icon_13"] {
-    content: url(https://api.iconify.design/mdi/battery-high.svg?color=white);
+    content: var(--ablaster);
 }
 
 .weapIcon[src*="icon_14"] {
-    content: url(https://api.iconify.design/mdi/bow-arrow.svg?color=white);
+    content: var(--crossbow);
 }
 
 .weapIcon[src*="icon_15"] {
-    content: url(https://api.iconify.design/mdi/dots-vertical.svg?color=white);
+    content: var(--famas);
 }
 
 .weapIcon[src*="icon_16"] {
-    content: url(https://api.iconify.design/mdi/transfer-up.svg?color=white);
+    content: var(--so);
 }
 
 .weapIcon[src*="icon_18"] {
-    content: url(https://api.iconify.design/mdi/bomb.svg?color=white);
+    content: var(--bomb);
 }
 
 .weapIcon[src*="icon_19"] {
-    content: url(https://api.iconify.design/mdi/lightning-bolt.svg?color=white);
+    content: var(--blaster);
 }
 
 .weapIcon[src*="icon_20"] {
-    content: url(https://api.iconify.design/mdi/hammer-wrench.svg?color=white);
+    content: var(--build);
 }
 
 .weapIcon[src*="icon_22"] {
-    content: url(https://api.iconify.design/mdi/gun.svg?color=white);
-    background: url(https://api.iconify.design/mdi/magazine-pistol.svg?color=white&flip=horizontal);
+    content: var(--pistols);
+    background: var(--mag);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: 20px 12px;
 }
 
 #weapIconMel {
-    content: url(https://api.iconify.design/mdi/knife-military.svg?color=white) !important;
+    content: var(--melee) !important;
 }
 
 #weapIconMel[src*="weapons/icon_0"] {
-    content: url(https://api.iconify.design/mdi/boxing-glove.svg?color=white) !important;
+    content: var(--fist) !important;
 }
 
 #leaderDisplay {
@@ -1506,6 +1557,7 @@ input:checked+.slider {
 #timerVal {
     font-size: 54px;
     text-shadow: 0 4px rgba(0,0,0,0.25);
+    color: var(--secondary);
 }
 
 #curGameInfo {
@@ -1514,6 +1566,7 @@ input:checked+.slider {
     left: 20px;
     font-size: 20px;
     text-shadow: var(--accent) 4px 0px 0px, var(--accent) 3.87565px 0.989616px 0px, var(--accent) 3.51033px 1.9177px 0px, var(--accent) 2.92676px 2.72656px 0px, var(--accent) 2.16121px 3.36588px 0px, var(--accent) 1.26129px 3.79594px 0px, var(--accent) 0.282949px 3.98998px 0px, var(--accent) -0.712984px 3.93594px 0px, var(--accent) -1.66459px 3.63719px 0px, var(--accent) -2.51269px 3.11229px 0px, var(--accent) -3.20457px 2.39389px 0px, var(--accent) -3.69721px 1.52664px 0px, var(--accent) -3.95997px 0.56448px 0px, var(--accent) -3.97652px -0.432781px 0px, var(--accent) -3.74583px -1.40313px 0px, var(--accent) -3.28224px -2.28625px 0px, var(--accent) -2.61457px -3.02721px 0px, var(--accent) -1.78435px -3.57996px 0px, var(--accent) -0.843183px -3.91012px 0px, var(--accent) 0.150409px -3.99717px 0px, var(--accent) 1.13465px -3.8357px 0px, var(--accent) 2.04834px -3.43574px 0px, var(--accent) 2.83468px -2.82216px 0px, var(--accent) 3.44477px -2.03312px 0px, var(--accent) 3.84068px -1.11766px 0px, var(--accent) 3.9978px -0.132717px 0px;
+    color: var(--secondary);
 }
 
 #curGameInfo div {
